@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+<style>
+    body{
+        margin: 0;
+        position: relative;
+        height: 100vh;
+    }
+    #max >div, #min >div{
+        font-weight: bold;
+    }
+    .cont{
+        width: 500px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 15px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+    }
+
+    .dates{
+        display: flex;
+        justify-content: space-between;
+    }
+    #text{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+    }
+</style>
+
+<div class="cont">
+    <div class="dates">
+        <label>Начало <input type="date" id="dStart"></label>
+        <label>Конец <input type="date" id="dEnd"></label>
+    </div>
+    <button disabled>Рассчитать</button>
+    <div id="text">
+        <div>Максимальные значения были:
+            <ul id="max">
+
+            </ul>
+        </div>
+        <div>Минимальные значения были:
+            <ul id="min">
+
+            </ul>
+        </div>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
